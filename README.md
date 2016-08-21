@@ -3,6 +3,25 @@ gr
 
 Find the golden number which you want.
 
+Usage
+-----
+
+```
+$ gr OPTION...
+Find the golden number you want.
+
+Predicates:
+  -n, --near=N      find numbers near N
+  -o, --of=N        find numbers of N
+  -r, --range=N-M   find numbers between N and M
+
+Miscellaneous:
+  -f, --first=N     set first golden number for N (default: 3.0)
+  -d, --decimal     show number as a decimal
+      --help        display this help and exit
+      --version     display version information and exit
+```
+
 License
 -------
 
