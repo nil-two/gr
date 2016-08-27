@@ -30,7 +30,7 @@ func (f *FindOf) Init(firstNumber float64, showDecimal bool) {
 }
 
 func (f *FindOf) Do(w io.Writer) error {
-	smaller, larger := f.n*goldenRatio, f.n/goldenRatio
+	smaller, larger := f.n/goldenRatio, f.n*goldenRatio
 	if f.showDecimal {
 		fmt.Fprintln(w, smaller, larger)
 	} else {
