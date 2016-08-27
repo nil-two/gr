@@ -25,7 +25,7 @@ var (
 func printUsage() {
 	fmt.Fprintf(os.Stderr, `
 Usage: %s OPTION...
-Find the golden number you want.
+Find the golden number.
 
 Predicates:
   -n, --near=N      find numbers near N
