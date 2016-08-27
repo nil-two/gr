@@ -12,8 +12,8 @@ type FindOf struct {
 	showDecimal bool
 }
 
-func NewFindOf(raw_n string) (f *FindOf, err error) {
-	n, err := strconv.ParseFloat(raw_n, 64)
+func NewFindOf(rawN string) (f *FindOf, err error) {
+	n, err := strconv.ParseFloat(rawN, 64)
 	if err != nil {
 		return nil, err
 	}

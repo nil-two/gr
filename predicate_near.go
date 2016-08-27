@@ -12,8 +12,8 @@ type FindNear struct {
 	showDecimal bool
 }
 
-func NewFindNear(raw_n string) (f *FindNear, err error) {
-	n, err := strconv.ParseFloat(raw_n, 64)
+func NewFindNear(rawN string) (f *FindNear, err error) {
+	n, err := strconv.ParseFloat(rawN, 64)
 	if err != nil {
 		return nil, err
 	}

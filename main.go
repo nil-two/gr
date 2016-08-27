@@ -53,17 +53,17 @@ func guideToHelp() {
 }
 
 func parsePredicate() (p Predicate, err error) {
-	n_predicates := 0
+	nPredicates := 0
 	flagset.Visit(func(f *pflag.Flag) {
 		switch f.Name {
 		case "near", "of", "range":
-			n_predicates++
+			nPredicates++
 		}
 	})
-	if n_predicates < 1 {
+	if nPredicates < 1 {
 		return nil, fmt.Errorf("no spcify predicate")
 	}
-	if n_predicates > 1 {
+	if nPredicates > 1 {
 		return nil, fmt.Errorf("only one type of predicate may be specified")
 	}
 
