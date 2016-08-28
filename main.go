@@ -25,7 +25,7 @@ var (
 func printUsage() {
 	fmt.Fprintf(os.Stderr, `
 Usage: %s OPTION...
-Find the golden number.
+Find the numeric values which related to the golden ratio.
 
 Predicates:
   -n, --near=N      find numbers near N

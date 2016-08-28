@@ -1,14 +1,14 @@
 gr
 ==
 
-Find the golden number which.
+Find the numbers which related to the golden ratio.
 
 Usage
 -----
 
 ```
 $ gr OPTION...
-Find the golden number.
+Find the numbers which related to the golden ratio.
 
 Predicates:
   -n, --near=N      find numbers near N
