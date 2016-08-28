@@ -1,6 +1,8 @@
 gr
 ==
 
+[![Build Status](https://travis-ci.org/kusabashira/gr.svg?branch=master)](https://travis-ci.org/kusabashira/gr)
+
 Find the numbers which related to the golden ratio.
 
 Usage
