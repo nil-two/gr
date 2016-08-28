@@ -22,6 +22,19 @@ Miscellaneous:
       --version     display version information and exit
 ```
 
+Installation
+------------
+
+### compiled binary
+
+See [releases](https://github.com/kusabashira/gr/releases)
+
+### go get
+
+```
+go get github.com/kusabashira/gr
+```
+
 Options
 -------
 
