@@ -10,7 +10,7 @@ import (
 
 var (
 	cmdName    = "gr"
-	cmdVersion = "0.0.0"
+	cmdVersion = "0.1.0"
 
 	flagset      = pflag.NewFlagSet(cmdName, pflag.ContinueOnError)
 	findNearArg  = flagset.StringP("near", "n", "", "")
