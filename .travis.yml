@@ -1,0 +1,31 @@
+language: go
+go:
+- 1.7
+
+env:
+  global:
+    - PATH="$GOPATH/bin:$PATH"
+    - RELEASES_PATH=/tmp/releases
+
+script:
+  - go test -v
+
+before_deploy:
+  - go get github.com/laher/goxc
+  - goxc -tasks 'xc archive' -bc 'windows darwin linux' -d "$RELEASES_PATH" -resources-include 'README*'
+
+deploy:
+  provider: releases
+  api_key:
+    secure: gfRa1TpzMgDhXa9t85NM4/IWi6BFjM7xqJrYyKEXEcZ3culEvRpsxYf4JQnUY0aY844PFmrtsWbcJrovG+zFCUsO0buYZYEjpmqPpck0KLv1+xlL3An9SNFfmOLiQqkvtgbHbhisoejQ3CNAcBswxf/dkiPGwtCIQdIgnOzuAhB08MjEFNVcNelRB11fuZJkWNVtFcwxEFT6ZjtHg2NEIgWb0qUIyb17AWb0erN7qLyCPoA27gaatyWrKtSLzmaCWbxGS7taxg7GCbmcG/H8egQK2uwVI8fzq00/ss7nG2en9DrO9SlSg3ftQE6ZcrZhZk44Vb+fSAdKXf0OO6rk3zJCqt25lHCTwvMz63rCubICua/MFEHM2VGfottFhxTtXoi3u/Se3P+HKinl7zRRR2x15eP+rDSxhzvmd+3xuaOjb7NDWOp5koemITFt2VpFjQ+rHQzxLvfC04nPmo64Gve4+23RIoM9V3+YBdssPKAoHXzcYHrkZsxNGt62gQ/O8myJUQFymv5mLWffjIc48st/tsiZyzpfUgspgwX++BcZI2aohiEIMw6P3Jzozl/Tns1+6HNTy8PghtVyopMy1fsSySVKQ4Xf6SQJB1Y0XpSc6WDoImRgI9G6GrWJXEObuA5xLx3iXUwVjigl+4KMDDDgRpmNxjC3QYUbUkkhdQo=
+  file:
+    - $RELEASES_PATH/snapshot/gr_windows_386.zip
+    - $RELEASES_PATH/snapshot/gr_windows_amd64.zip
+    - $RELEASES_PATH/snapshot/gr_darwin_386.zip
+    - $RELEASES_PATH/snapshot/gr_darwin_amd64.zip
+    - $RELEASES_PATH/snapshot/gr_linux_386.tar.gz
+    - $RELEASES_PATH/snapshot/gr_linux_amd64.tar.gz
+    - $RELEASES_PATH/snapshot/gr_linux_arm.tar.gz
+  on:
+    repo: kusabashira/gr
+    tags: true
