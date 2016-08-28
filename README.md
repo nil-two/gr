@@ -5,6 +5,18 @@ gr
 
 Find the numbers which related to the golden ratio.
 
+```
+$ gr -o8
+5 13
+
+$ gr -r10-100
+13
+21
+33
+54
+87
+```
+
 Usage
 -----
 
