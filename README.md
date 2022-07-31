@@ -1,8 +1,6 @@
 gr
 ==
 
-[![Build Status](https://travis-ci.org/kusabashira/gr.svg?branch=master)](https://travis-ci.org/kusabashira/gr)
-
 Find the numbers which related to the golden ratio.
 
 ```
@@ -41,12 +39,12 @@ Installation
 
 ### compiled binary
 
-See [releases](https://github.com/kusabashira/gr/releases)
+See [releases](https://github.com/nil2nekoni/gr/releases)
 
 ### go get
 
 ```
-go get github.com/kusabashira/gr
+go get github.com/nil2nekoni/gr
 ```
 
 Options
@@ -177,4 +175,4 @@ MIT License
 Author
 ------
 
-kusabashira <kusabashira227@gmail.com>
+nil2 <nil2@nil2.org>
