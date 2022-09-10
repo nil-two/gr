@@ -39,12 +39,12 @@ Installation
 
 ### compiled binary
 
-See [releases](https://github.com/nil2nekoni/gr/releases)
+See [releases](https://github.com/nil-two/gr/releases)
 
 ### go get
 
 ```
-go get github.com/nil2nekoni/gr
+go get github.com/nil-two/gr
 ```
 
 Options
